@@ -3,9 +3,11 @@ package com.featureprobe.boot;
 import com.featureprobe.sdk.server.FPConfig;
 import com.featureprobe.sdk.server.FeatureProbe;
 import org.codehaus.plexus.util.StringUtils;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -16,11 +18,13 @@ import java.util.InvalidPropertiesFormatException;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-@Configuration
+@AutoConfiguration
+@ConditionalOnProperty(prefix = "spring.featureprobe", name = "enabled", havingValue = "true", matchIfMissing = true)
 @EnableConfigurationProperties({FeatureProbeConfig.class})
 public class FeatureProbeConfiguration {
 
     @Bean
+    @ConditionalOnMissingBean
     public FeatureProbe featureProbe(FeatureProbeConfig properties) throws InvalidPropertiesFormatException {
         FPConfig config;
         long refreshInterval = Objects.isNull(properties.getRefreshInterval()) ? 5L : properties.getRefreshInterval();

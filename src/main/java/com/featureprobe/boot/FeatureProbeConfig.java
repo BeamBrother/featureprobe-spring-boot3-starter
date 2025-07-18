@@ -1,10 +1,9 @@
 package com.featureprobe.boot;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 
 @Validated
 @ConfigurationProperties(prefix = "spring.featureprobe")
@@ -25,7 +24,6 @@ public class FeatureProbeConfig {
     private Long startWait;
 
     private Long refreshInterval;
-
 
 
     public String getSdkKey() {

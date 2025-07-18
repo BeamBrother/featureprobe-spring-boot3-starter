@@ -1,5 +1,8 @@
-# FeatureProbe Spring Boot Starter
+# FeatureProbe Spring Boot3 Starter
+> Version explanation: `2.3.0-1.305`, that is, server-sdk-java version is `2.3.0-1`, and 305 is Spring Boot version `3.0.5`.
+> By analogy, `2.3.0-1.3210` is server-sdk-java version `2.3.0-1`, and `3210` is Spring Boot version `3.2.10`.
 
+## Original Repo
 [![GitHub Star](https://img.shields.io/github/stars/FeatureProbe/featureprobe-spring-boot-starter)](https://github.com/FeatureProbe/featureprobe-spring-boot-starter/stargazers)
 [![License](https://img.shields.io/github/license/FeatureProbe/featureprobe-spring-boot-starter)](https://github.com/FeatureProbe/featureprobe-spring-boot-starter/blob/main/LICENSE)
 
@@ -12,7 +15,7 @@ Reading the short [Introduction](https://docs.featureprobe.io/reference/sdk-intr
 
 ## How to Use This SDK
 
-See [SDK Doc](https://docs.featureprobe.io/how-to/Server-Side%20SDKs/spring-boot-starter) for detail.  [中文](https://docs.featureprobe.io/zh-CN/how-to/Server-Side%20SDKs/spring-boot-starter/)
+See [SDK Doc](https://featureprobe.github.io/FeatureProbe/) for detail.  [中文](https://featureprobe.github.io/FeatureProbe/zh-CN/)
 
 ## Contributing
 
